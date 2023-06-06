@@ -1,0 +1,55 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!--Partial View-->
+
+<partial name="_EmpCardPartial" model="Model"/>
+<a asp-action="Index" asp-controller="Employee">Back To List</a>
+
+
+@*
+<div style="color:@ViewData["clr"]">
+    <h1>Details</h1>
+    <h2> Name : @Model.Name</h2>
+    <h3> Message: @ViewData["msg"]</h3>
+    <h3> Salary :@(int.Parse(ViewData["slr"].ToString()) + 1000)</h3>
+    <h3> Salary :@(ViewBag.slr + 1000)</h3>
+
+</div>*@
+@*<select class="form-control">
+    @foreach (var item in (List<string>)ViewData["brch"])
+    {
+        <option>@item</option>
+    }
+</select>
+*@
+@*<select class="form-control">
+    @foreach (var item in ViewBag.brch)
+    {
+        <option>@item</option>
+    }
+</select>
+<h1>@ViewBag.Track</h1>
+<h1>@ViewData["Track"]</h1>
+*@
+<!--Disadvantage of ViewData-->
+<!--
+  1- Type Casting
+  2- Magic string
+
+
+-->
+
+
+
+@section Scripts{
+    <script>
+        console.log("ay haga");
+    </script>
+
+    <script>
+        console.log("ay haga");
+    </script>
+}   

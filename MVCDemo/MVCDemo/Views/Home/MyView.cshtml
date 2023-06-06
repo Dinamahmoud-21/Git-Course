@@ -1,0 +1,35 @@
+﻿<h1 style="color:red">My First View :)</h1>
+<script>
+    alert("Hello");
+   
+</script>
+<style>
+    h1{color:blue};
+</style>
+
+
+<!--Razor Syntax == > Razor Engin-->
+<!--Block of Code-->
+@{
+    int x = 10;
+    int y = x + 10;   
+}
+<!--inline code-->
+@x
+<h2>@x</h2>
+<!--Condition-->
+@if (x < y)
+{
+    <li><b>x (@x) less than  y (@y)</b></li>
+}
+else
+{
+    <li>x greater than y</li>
+}
+<!--Looping-->
+<ol>
+    @for(int i = 0; i < 10; i++)
+    {
+        <li>@i</li>
+    }
+</ol>

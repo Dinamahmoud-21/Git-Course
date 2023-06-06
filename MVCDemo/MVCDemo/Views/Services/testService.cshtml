@@ -1,0 +1,12 @@
+﻿@using MVCDemo.Repository
+@inject IDepartmentRepository DeptRepoFromView
+@inject IConfiguration config
+
+@{
+    ViewData["Title"] = "testService";
+}
+@config["app"]
+<h1>testService</h1>
+<h2> ID From Controller :<br /> @ViewBag.ID</h2>
+<h2> ID FRom View       :<br /> @DeptRepoFromView.ID </h2>
+

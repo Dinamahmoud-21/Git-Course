@@ -1,0 +1,17 @@
+﻿@*@using MVCDemo.ViewModel*@
+@*@model MVCDemo.ViewModel.EmployeeWithBrachsMsgColorViewModel*@
+@model EmployeeWithBrachsMsgColorViewModel
+@{
+    ViewData["Title"] = "DetailsVM";
+}
+
+<h1>DetailsVM</h1>
+
+<h1>@Model.EmployeeName</h1>
+<h2>@(Model.Salary+1000)</h2>
+<select class="form-control" style="color:@Model.Color">
+    @foreach (var item in Model.Branches)
+    {
+        <option>@item</option>
+    }
+</select>

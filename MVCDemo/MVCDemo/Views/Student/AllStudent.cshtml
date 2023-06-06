@@ -1,0 +1,22 @@
+﻿<!--Strong Type View-->
+@model List<Student>
+
+<h1>Students Data</h1>
+<table class="table table-bordered table-hover">
+@foreach(Student item in Model){
+    <tr>
+        <td>
+            @item.Id
+        </td>
+        <td>
+            @item.Name
+        </td>
+        <td>
+            @item.Image
+        </td>
+        <td>
+            <img src="~/Images/@item.Image" style="width:50px;height:50px">
+        </td>
+    </tr>
+}
+</table>

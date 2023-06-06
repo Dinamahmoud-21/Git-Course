@@ -1,0 +1,54 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "New";
+    SelectList deptList = new SelectList(ViewBag.Depts,"Id","Name");
+}
+
+<h1>New</h1>
+@*<form method="post" asp-action="New" asp-controller="Employee" asp-route-id="@Model.Id" >*@
+<form method="post" >
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Salary"></label>
+        <input class="form-control" asp-for="Salary" />
+        <span asp-validation-for="Salary" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Address"></label>
+        <input class="form-control" asp-for="Address"  />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Image"></label>
+        <input class="form-control" asp-for="Image"/>
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="DeptId"></label>
+        @*<input class="form-control" asp-for="DeptId" />*@
+        <select asp-for="DeptId" asp-items="deptList" class="form-control">
+            <option value="0">-- Select Department --</option>
+        </select>
+        <span asp-validation-for="DeptId" class="text-danger"></span>
+    </div>
+    
+    <input type="submit" value="Create" class="btn-danger"/>
+
+</form>
+
+<a asp-action="Index" >Back To List</a>
+
+
+@section Scripts{
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
+

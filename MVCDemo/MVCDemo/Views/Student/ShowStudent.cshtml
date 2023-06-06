@@ -1,0 +1,11 @@
+﻿<!--razor syntax-->
+@model Student
+
+<div class="card" style="width:500px">
+    <img class="card-img-top" src="/Images/@Model.Image" alt="Card image">
+  <div class="card-img-overlay">
+        <h4 class="card-title">@Model.Name</h4>
+        <p class="card-text">@Model.Address</p>
+    <a href="#" class="btn btn-primary">See Profile</a>
+  </div>
+</div>
